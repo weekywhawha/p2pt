@@ -617,7 +617,7 @@ function noop () {}
 module.exports = WebSocketTracker
 
 },{"../common":4,"./tracker":2,"debug":7,"randombytes":16,"simple-peer":34,"simple-websocket":37}],4:[function(require,module,exports){
-(function (Buffer){
+(function (Buffer){(function (){
 /**
  * Functions/constants needed by both the client and server.
  */
@@ -642,11 +642,11 @@ exports.hexToBinary = function (str) {
 var config = require('./common-node')
 Object.assign(exports, config)
 
-}).call(this,require("buffer").Buffer)
+}).call(this)}).call(this,require("buffer").Buffer)
 },{"./common-node":5,"buffer":6}],5:[function(require,module,exports){
 
 },{}],6:[function(require,module,exports){
-(function (Buffer){
+(function (Buffer){(function (){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -2425,9 +2425,9 @@ function numberIsNaN (obj) {
   return obj !== obj // eslint-disable-line no-self-compare
 }
 
-}).call(this,require("buffer").Buffer)
+}).call(this)}).call(this,require("buffer").Buffer)
 },{"base64-js":1,"buffer":6,"ieee754":11}],7:[function(require,module,exports){
-(function (process){
+(function (process){(function (){
 /* eslint-env browser */
 
 /**
@@ -2693,7 +2693,7 @@ formatters.j = function (v) {
 	}
 };
 
-}).call(this,require('_process'))
+}).call(this)}).call(this,require('_process'))
 },{"./common":8,"_process":14}],8:[function(require,module,exports){
 
 /**
@@ -3980,7 +3980,7 @@ module.exports = typeof queueMicrotask === 'function'
     .catch(err => setTimeout(() => { throw err }, 0))
 
 },{}],16:[function(require,module,exports){
-(function (process,global){
+(function (process,global){(function (){
 'use strict'
 
 // limit of Crypto.getRandomValues()
@@ -4032,7 +4032,7 @@ function randomBytes (size, cb) {
   return bytes
 }
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"_process":14,"safe-buffer":33}],17:[function(require,module,exports){
 'use strict';
 
@@ -4163,7 +4163,7 @@ createErrorType('ERR_STREAM_UNSHIFT_AFTER_END_EVENT', 'stream.unshift() after en
 module.exports.codes = codes;
 
 },{}],18:[function(require,module,exports){
-(function (process){
+(function (process){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -4303,7 +4303,7 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
     this._writableState.destroyed = value;
   }
 });
-}).call(this,require('_process'))
+}).call(this)}).call(this,require('_process'))
 },{"./_stream_readable":20,"./_stream_writable":22,"_process":14,"inherits":12}],19:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -4345,7 +4345,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
 },{"./_stream_transform":21,"inherits":12}],20:[function(require,module,exports){
-(function (process,global){
+(function (process,global){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5470,7 +5470,7 @@ function indexOf(xs, x) {
 
   return -1;
 }
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../errors":17,"./_stream_duplex":18,"./internal/streams/async_iterator":23,"./internal/streams/buffer_list":24,"./internal/streams/destroy":25,"./internal/streams/from":27,"./internal/streams/state":29,"./internal/streams/stream":30,"_process":14,"buffer":6,"events":9,"inherits":12,"string_decoder/":38,"util":5}],21:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -5674,7 +5674,7 @@ function done(stream, er, data) {
   return stream.push(null);
 }
 },{"../errors":17,"./_stream_duplex":18,"inherits":12}],22:[function(require,module,exports){
-(function (process,global){
+(function (process,global){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6372,9 +6372,9 @@ Writable.prototype._undestroy = destroyImpl.undestroy;
 Writable.prototype._destroy = function (err, cb) {
   cb(err);
 };
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"../errors":17,"./_stream_duplex":18,"./internal/streams/destroy":25,"./internal/streams/state":29,"./internal/streams/stream":30,"_process":14,"buffer":6,"inherits":12,"util-deprecate":39}],23:[function(require,module,exports){
-(function (process){
+(function (process){(function (){
 'use strict';
 
 var _Object$setPrototypeO;
@@ -6582,7 +6582,7 @@ var createReadableStreamAsyncIterator = function createReadableStreamAsyncIterat
 };
 
 module.exports = createReadableStreamAsyncIterator;
-}).call(this,require('_process'))
+}).call(this)}).call(this,require('_process'))
 },{"./end-of-stream":26,"_process":14}],24:[function(require,module,exports){
 'use strict';
 
@@ -6795,7 +6795,7 @@ function () {
   return BufferList;
 }();
 },{"buffer":6,"util":5}],25:[function(require,module,exports){
-(function (process){
+(function (process){(function (){
 'use strict'; // undocumented cb() API, needed for core, not for public API
 
 function destroy(err, cb) {
@@ -6901,7 +6901,7 @@ module.exports = {
   undestroy: undestroy,
   errorOrDestroy: errorOrDestroy
 };
-}).call(this,require('_process'))
+}).call(this)}).call(this,require('_process'))
 },{"_process":14}],26:[function(require,module,exports){
 // Ported from https://github.com/mafintosh/end-of-stream with
 // permission from the author, Mathias Buus (@mafintosh).
@@ -8082,6 +8082,7 @@ module.exports = function () {
 /******/ ]);
 });
 },{}],33:[function(require,module,exports){
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -8148,7 +8149,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 }
 
 },{"buffer":6}],34:[function(require,module,exports){
-(function (Buffer){
+(function (Buffer){(function (){
 var debug = require('debug')('simple-peer')
 var getBrowserRTC = require('get-browser-rtc')
 var randombytes = require('randombytes')
@@ -9157,7 +9158,7 @@ Peer.channelConfig = {}
 
 module.exports = Peer
 
-}).call(this,require("buffer").Buffer)
+}).call(this)}).call(this,require("buffer").Buffer)
 },{"buffer":6,"debug":7,"get-browser-rtc":10,"queue-microtask":15,"randombytes":16,"readable-stream":31}],35:[function(require,module,exports){
 /* global self */
 
@@ -9272,7 +9273,7 @@ function sha1 (buf, cb) {
 module.exports = sha1
 
 },{"rusha":32}],37:[function(require,module,exports){
-(function (Buffer){
+(function (Buffer){(function (){
 /* global WebSocket, DOMException */
 
 const debug = require('debug')('simple-websocket')
@@ -9535,7 +9536,7 @@ Socket.WEBSOCKET_SUPPORT = !!_WebSocket
 
 module.exports = Socket
 
-}).call(this,require("buffer").Buffer)
+}).call(this)}).call(this,require("buffer").Buffer)
 },{"buffer":6,"debug":7,"queue-microtask":15,"randombytes":16,"readable-stream":31,"ws":5}],38:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9834,7 +9835,7 @@ function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
 },{"safe-buffer":33}],39:[function(require,module,exports){
-(function (global){
+(function (global){(function (){
 
 /**
  * Module exports.
@@ -9903,9 +9904,9 @@ function config (name) {
   return String(val).toLowerCase() === 'true';
 }
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+}).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],40:[function(require,module,exports){
-(function (Buffer){
+(function (Buffer){(function (){
 /**
  * Peer 2 Peer WebRTC connections with WebTorrent Trackers as signalling server
  * Copyright Subin Siby <mail@subinsb.com>, 2020
@@ -10065,6 +10066,39 @@ class P2PT extends EventEmitter {
   }
 
   /**
+   * Add a tracker
+   * @param string announceURL Tracker Announce URL
+   */
+  addTracker (announceURL) {
+    if (this.announceURLs.indexOf(announceURL) !== -1) {
+      throw new Error('Tracker already added')
+    }
+
+    const key = this.announceURLs.push(announceURL)
+
+    this.trackers[key] = new WebSocketTracker(this, announceURL)
+    this.trackers[key].announce(this._defaultAnnounceOpts())
+  }
+
+  /**
+   * Remove a tracker without destroying peers
+   */
+  removeTracker (announceURL) {
+    const key = this.announceURLs.indexOf(announceURL)
+
+    if (key === -1) {
+      throw new Error('Tracker does not exist')
+    }
+
+    // hack to not destroy peers
+    this.trackers[key].peers = []
+    this.trackers[key].destroy()
+
+    delete this.trackers[key]
+    delete this.announceURLs[key]
+  }
+
+  /**
    * Remove a peer from the list if all channels are closed
    * @param integer id Peer ID
    */
@@ -10147,9 +10181,7 @@ class P2PT extends EventEmitter {
   requestMorePeers () {
     return new Promise(resolve => {
       for (const key in this.trackers) {
-        this.trackers[key].announce({
-          numwant: 50
-        })
+        this.trackers[key].announce(this._defaultAnnounceOpts())
       }
       resolve(this.peers)
     })
@@ -10244,15 +10276,13 @@ class P2PT extends EventEmitter {
   _fetchPeers () {
     for (const key in this.announceURLs) {
       this.trackers[key] = new WebSocketTracker(this, this.announceURLs[key])
-      this.trackers[key].announce({
-        numwant: 50
-      })
+      this.trackers[key].announce(this._defaultAnnounceOpts())
     }
   }
 }
 
 module.exports = P2PT
 
-}).call(this,require("buffer").Buffer)
+}).call(this)}).call(this,require("buffer").Buffer)
 },{"bittorrent-tracker/lib/client/websocket-tracker":3,"buffer":6,"debug":7,"events":9,"randombytes":16,"simple-sha1":35}]},{},[40])(40)
 });
