@@ -3,7 +3,7 @@
   "version": "1.5.1",
   "description": "P2P connections with WebTorrent trackers",
   "main": "node.js",
-  "browser": "p2pt.js",
+  "browser": "dist/p2pt.umd.js",
   "types": "p2pt.d.ts",
   "scripts": {
     "build": "npm run build:umd && npm run build:umd-tiny",
